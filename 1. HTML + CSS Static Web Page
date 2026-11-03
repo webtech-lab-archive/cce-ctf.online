@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Static Web Page</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#f2f2f2}
+header,footer{background:#333;color:white;text-align:center;padding:20px}
+nav{background:#555;text-align:center;padding:15px}
+nav a{color:white;text-decoration:none;margin:15px}
+.container{display:flex;gap:20px;width:80%;margin:30px auto}
+.box{background:white;padding:25px;flex:1;text-align:center;
+     border-radius:10px;box-shadow:0 0 10px gray}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>My Web Page</h1>
+<p>HTML and CSS</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="container">
+<div class="box"><h2>HTML</h2><p>Creates webpage structure.</p></div>
+<div class="box"><h2>CSS</h2><p>Styles the webpage.</p></div>
+<div class="box"><h2>Web Design</h2><p>Creates attractive pages.</p></div>
+</div>
+
+<footer>
+<p>© 2026 My Web Page</p>
+</footer>
+
+</body>
+</html>
