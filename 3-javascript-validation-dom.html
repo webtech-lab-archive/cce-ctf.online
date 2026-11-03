@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validation</title>
+<style>
+body{font-family:Arial;background:#f2f2f2;padding:30px}
+.container{width:350px;margin:auto;padding:25px;background:white}
+input,button{width:100%;padding:10px;margin:8px 0}
+button{background:#333;color:white;border:0}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2 id="heading">Registration Form</h2>
+
+<form id="form">
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="email" placeholder="Email">
+<input type="number" id="age" placeholder="Age">
+<button type="submit">Submit</button>
+</form>
+
+<p id="msg"></p>
+</div>
+
+<script>
+document.getElementById("heading").textContent="User Registration";
+
+document.getElementById("form").addEventListener("submit",function(e){
+    e.preventDefault();
+
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let age=document.getElementById("age").value;
+    let msg=document.getElementById("msg");
+
+    if(name===""){
+        msg.textContent="Please enter your name.";
+        msg.style.color="red";
+    }
+    else if(email==="" || !email.includes("@")){
+        msg.textContent="Please enter a valid email.";
+        msg.style.color="red";
+    }
+    else if(age==="" || age<18){
+        msg.textContent="Age must be 18 or above.";
+        msg.style.color="red";
+    }
+    else{
+        msg.textContent="Registration Successful! Welcome "+name;
+        msg.style.color="green";
+    }
+});
+</script>
+
+</body>
+</html>
